@@ -14,10 +14,10 @@ export default function Calculator() {
         
    <input type="radio" name="gender" id="Female"/>Female
    <label htmlFor="weight">Weight</label>
-   <input type="text" placeholder='Enter your weight' />
+   <input type="text" placeholder='Enter your weight' onChange={InputWeight} />
    <label htmlFor="height">Height</label>
-   <input type="text" placeholder='Enter Your height' />
-   
+   <input type="text" placeholder='Enter Your height'  onChange={InputHeight} />
+
     
     
 
