@@ -7,9 +7,11 @@ export default function Calculator() {
  const [Height,SetHeight]=useState("");
  const [weight,SetWeight]=useState("");
  const [age,setAge]=useState("");
- const [bmrTemp,setbmrTemp]=useState("");
+ const [bmrTemp,setbmrTemp]=useState(0);
 
 //  const [bmr,setBMR]=useState("");
+
+let heightinches=((Height * 30.48) + (Height *2.54));
 
 
  const InputWeight=(event)=>{
@@ -23,21 +25,24 @@ export default function Calculator() {
 
  }
 
+
 const Gender2=()=>{
- alert("error");
-
-
+  
+ 
   
 
+ var  Temp = 665.1 + 4.35 * weight + 4.7 * heightinches - 4.7 * age;
+  setbmrTemp(Temp);
 }
 
 const GenderFunc=()=>{
-   
-
-   var Temp = 66 + 6.2 * weight + 12.7 * Height - 6.76 * age;
+ 
+ 
+    var Temp = 66 + 6.2 * weight + 12.7 * heightinches - 6.76 * age;
     setbmrTemp(Temp);
   
 }
+
 
 const BMRcal=()=>{
   alert(bmrTemp);
