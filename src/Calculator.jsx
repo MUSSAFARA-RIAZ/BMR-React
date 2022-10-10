@@ -38,7 +38,7 @@ const Gender2=()=>{
 const GenderFunc=()=>{
  
  
-    let Temp = 66 + 6.2 * weight + 12.7 * heightinches - 6.76 * age;
+    let Temp = 66 + 6.2 * this.weight + 12.7 * this.heightinches - 6.76 * age;
     setbmrTemp(Temp);
   
 }
