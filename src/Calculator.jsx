@@ -7,9 +7,9 @@ export default function Calculator() {
  const [Height,SetHeight]=useState("");
  const [weight,SetWeight]=useState("");
  const [age,setAge]=useState("");
- const [bmrTemp,setbmrTemp]=useState(0);
 
-//  const [bmr,setBMR]=useState("");
+
+
 
 let heightinches=((Height * 30.48) + (Height *2.54));
 
@@ -25,30 +25,48 @@ let heightinches=((Height * 30.48) + (Height *2.54));
 
  }
 
-
-const Gender2=()=>{
+//  var Temp=0;
+// const Gender2=()=>{
   
  
   
 
- var  Temp = 665.1 + 4.35 * weight + 4.7 * heightinches - 4.7 * age;
-  setbmrTemp(Temp);
-}
+//   Temp = 665.1 + 4.35 * weight + 4.7 * heightinches - 4.7 * age;
+//   // alert("Your gender is Female and your bmr is " + Temp);
 
+
+// }
+
+// const GenderFunc=()=>{
+//   Temp = 66 + 6.2 *weight + 12.7 * heightinches - 6.76 * age;
+  
+// }
+
+
+
+// const BMRcal=()=>{
+
+//   if(){
+//     alert("You are male");
+//   }
+//   else{
+//     alert("You are female");
+
+//   }
+ 
+ 
+
+
+//  }
 const GenderFunc=()=>{
- 
- 
-    let Temp = 66 + 6.2 * this.weight + 12.7 * this.heightinches - 6.76 * age;
-    setbmrTemp(Temp);
-  
+  if(value=="male"){
+    alert("You are male");
+  }
+  else{
+    alert("You are female");
+    
+  }
 }
-
-
-const BMRcal=()=>{
-  alert(bmrTemp);
-
- }
-
 
  
 
@@ -57,9 +75,10 @@ const BMRcal=()=>{
      <h1>BMR and Daily Calorie Calculator</h1>
      <form action="">
       <label>Gender</label>
-     <input type="radio" name="gender" id="male" onChange={GenderFunc} value="male"/>Male
-        
-   <input type="radio" name="gender" id="Female" onChange={Gender2}/>Female
+      {/* onChange={GenderFunc} */}
+     <input type="radio" name="gender" id="male"  value="male" onChange={GenderFunc}/>{genderoption[0]}
+        {/* onChange={Gender2} */}
+   <input type="radio" name="gender" id="Female" value="Female" onChange={GenderFunc} />{genderoption[1]}
    <label htmlFor="weight">Weight</label>
    <input type="text" placeholder='Enter your weight'onChange={InputWeight} />
    <label htmlFor="height">Height</label>
