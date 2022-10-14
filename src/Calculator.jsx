@@ -63,7 +63,7 @@ const GenderFunc=()=>{
     alert("You are male");
   }
   else{
-    alert("You are femal");
+    alert("You are female");
     
   }
 }
