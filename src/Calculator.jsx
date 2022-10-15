@@ -60,7 +60,7 @@ let heightinches=((Height * 30.48) + (Height *2.54));
 //  }
 const GenderFunc=()=>{
   if(value==="male"){
-    alert("You are male");
+    alert("You are males");
   }
   else{
     alert("You are female");
