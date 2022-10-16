@@ -7,6 +7,8 @@ export default function Calculator() {
  const [Height,SetHeight]=useState("");
  const [weight,SetWeight]=useState("");
  const [age,setAge]=useState("");
+ const[gender,setGender]=useState("Female");
+
 
 
 
@@ -25,39 +27,7 @@ let heightinches=((Height * 30.48) + (Height *2.54));
 
  }
 
-//  var Temp=0;
-// const Gender2=()=>{
-  
- 
-  
 
-//   Temp = 665.1 + 4.35 * weight + 4.7 * heightinches - 4.7 * age;
-//   // alert("Your gender is Female and your bmr is " + Temp);
-
-
-// }
-
-// const GenderFunc=()=>{
-//   Temp = 66 + 6.2 *weight + 12.7 * heightinches - 6.76 * age;
-  
-// }
-
-
-
-// const BMRcal=()=>{
-
-//   if(){
-//     alert("You are male");
-//   }
-//   else{
-//     alert("You are female");
-
-//   }
- 
- 
-
-
-//  }
 const GenderFunc=()=>{
   if(value==="male"){
     alert("You are males");
@@ -75,10 +45,19 @@ const GenderFunc=()=>{
      <h1>BMR and Daily Calorie Calculator</h1>
      <form action="">
       <label>Gender</label>
-      {/* onChange={GenderFunc} */}
-     <input type="radio" name="gender" id="male"  value="male" onChange={GenderFunc}/>{genderoption[0]}
-        {/* onChange={Gender2} */}
-   <input type="radio" name="gender" id="Female" value="Female" onChange={GenderFunc} />{genderoption[1]}
+     {genderoption.map((index,value)=>{
+      <>
+      return(
+        <label>
+        <span>
+          <input type="text" key={index} value={value} 
+          onChange={(e)=>setGender(e.target.value)}
+           />       
+          {value}</span>
+        </label>
+      )
+      </>
+     })}
    <label htmlFor="weight">Weight</label>
    <input type="text" placeholder='Enter your weight'onChange={InputWeight} />
    <label htmlFor="height">Height</label>
