@@ -8,14 +8,7 @@ export default function Calculator() {
  const [weight,SetWeight]=useState("");
  const [age,setAge]=useState("");
  const[gender,setGender]=useState("Female");
-
-
-
-
-
 let heightinches=((Height * 30.48) + (Height *2.54));
-
-
  const InputWeight=(event)=>{
   SetWeight(event.target.value);
  }
@@ -24,21 +17,7 @@ let heightinches=((Height * 30.48) + (Height *2.54));
  }
  const InputAge=(event)=>{
   setAge(event.target.value);
-
  }
-
-
-const GenderFunc=()=>{
-  if(value==="male"){
-    alert("You are males");
-  }
-  else{
-    alert("You are female");
-    
-  }
-}
-
- 
 
   return (
     <div className='parent-div'>
