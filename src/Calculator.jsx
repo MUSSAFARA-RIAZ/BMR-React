@@ -18,7 +18,10 @@ let heightinches=((Height * 30.48) + (Height *2.54));
  const InputAge=(event)=>{
   setAge(event.target.value);
  }
-
+const BMRcal=()=>{
+  alert(heightinches*weight*age);
+  
+}
   return (
     <div className='parent-div'>
      <h1>BMR and Daily Calorie Calculator</h1>
