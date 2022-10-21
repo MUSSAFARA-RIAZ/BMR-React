@@ -26,7 +26,7 @@ const BMRcal=()=>{
     <div className='parent-div'>
      <h1>BMR and Daily Calorie Calculator</h1>
      <form action="">
-      <label>Gender</label>
+      <label>gender</label>
      {genderoption.map((index,value)=>{
       <>
       return(
