@@ -41,9 +41,9 @@ const BMRcal=()=>{
       </>
      })}
    <label htmlFor="weight">Weight</label>
-   <input type="text" placeholder='Enter your weight'onChange={InputWeight} />
+   <input type="text" placeholder='Enter your weight' id="weight"onChange={InputWeight} />
    <label htmlFor="height">Height</label>
-   <input type="text" placeholder='Enter Your height' onChange={InputHeight}/>    
+   <input type="text" placeholder='Enter Your height' id="height" onChange={InputHeight}/>    
    <label >Age</label>
    <input type="text" placeholder='Enter age' onChange={InputAge} />
 

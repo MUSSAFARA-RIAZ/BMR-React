@@ -15,11 +15,21 @@ h1{
   text-align: center;
 
 }
+button{
+  display: block;
+  width: 85%;
+  padding: 20px;
+  background-color: black;
+  color: white;
+
+}
 input{
-  display: 'block';
   width: 80%;
   padding: 20px;
+  margin: 20px;
 }
-
+label{
+  display: inline;
+}
 
 
